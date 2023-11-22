@@ -1,11 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup/Login Example</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
- <h1>hello</h1>   
+
+  <div class="container">
+    <div class="box">
+      <h1>Signup</h1>
+      <form id="signupForm">
+        <label for="signupUsername">Username:</label>
+        <input type="text" id="signupUsername" required>
+        <br>
+        <label for="signupPassword">Password:</label>
+        <input type="password" id="signupPassword" required>
+        <br>
+        <button type="button" onclick="signup()">Signup</button>
+      </form>
+    </div>
+
+    <div class="box">
+      <h1>Login</h1>
+      <form id="loginForm">
+        <label for="loginUsername">Username:</label>
+        <input type="text" id="loginUsername" required>
+        <br>
+        <label for="loginPassword">Password:</label>
+        <input type="password" id="loginPassword" required>
+        <br>
+        <button type="button" onclick="login()">Login</button>
+      </form>
+    </div>
+  </div>
+<script src="index.js"></script>
 </body>
 </html>
