@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hangman Game</title>
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="game.css">
   </head>
   <body>
     <div class="container">
@@ -33,6 +33,12 @@
       <hr>
       <div class="letters-guess"></div>
     </div>
-    <script src="main.js"></script>
+
+
+    <audio id="success" src="voices/shiha.mp3" preload="auto"></audio>
+    <audio id="fail" src="voices/ghalta.mp3" preload="auto"></audio>
+
+
+    <script src="game.js"></script>
   </body>
 </html>
