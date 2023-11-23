@@ -1,3 +1,5 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@500&family=Quicksand:wght@300;400;500;600;700&display=swap');
 body {
     font-family: 'Arial', sans-serif;
     background: url('https://images.pexels.com/photos/278918/pexels-photo-278918.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
@@ -22,6 +24,8 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
     border-radius: 40px;
     box-sizing: border-box;
+    font-family: 'Dosis', sans-serif;
+    font-family: 'Quicksand', sans-serif;
   }
   
   h1, h2, h3 {
