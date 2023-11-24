@@ -49,16 +49,16 @@ let randomPropName = allKeys[randomPropNumber];
 let randomPropValue = words[randomPropName];
 
 // Random Number Depend On Words
-let randomValueNumber = Math.floor(Math.random() * randomPropValue.length);
+ let randomValueNumber = Math.floor(Math.random() * randomPropValue.length);
 
 // The Chosen Word
-let randomValueValue = randomPropValue[randomValueNumber];
+  let randomValueValue = randomPropValue[randomValueNumber];
 
 // Set Category Info
 document.querySelector(".game-info .category span").innerHTML = randomPropName;
 
-// Select Letters Guess Element
-let lettersGuessContainer = document.querySelector(".letters-guess");
+// Select letters Guess Element
+ let lettersGuessContainer = document.querySelector(".letters-guess");
 
 // Convert Chosen Word To Array
 let lettersAndSpace = Array.from(randomValueValue);
@@ -141,8 +141,7 @@ document.addEventListener("click", (e) => {
       // Add Class Wrong On The Draw Element
       theDraw.classList.add(`wrong-${wrongAttempts}`);
 
-      // Play Fail Sound
-      document.getElementById("fail").play();
+     
 
       if (wrongAttempts === 8) {
 
@@ -180,5 +179,231 @@ function endGame() {
 
   // Append To The Body
   document.body.appendChild(div);
+  ////////new
+  if (wrongAttempts === 8) {
+    document.getElementById("fail").play();
+  } else {
+    document.getElementById("success").play();
+  }
 
 }
+
+
+// Restart Game Function
+function restartGame() {
+  // Reset wrong attempts
+  wrongAttempts = 0;
+
+  // Remove the "finished" class from lettersContainer
+  lettersContainer.classList.remove("finished");
+
+  // Remove the "wrong-X" class from theDraw
+  for (let i = 1; i <= 8; i++) {
+    theDraw.classList.remove(`wrong-${i}`);
+  }
+
+  // Remove the popup if it exists
+  const popup = document.querySelector(".popup");
+  if (popup) {
+    popup.remove();
+  }
+
+  // Clear the letters guess container
+  lettersGuessContainer.innerHTML = "";
+
+  // Generate a new random word
+  randomPropNumber = Math.floor(Math.random() * allKeys.length);
+  randomPropName = allKeys[randomPropNumber];
+  randomPropValue = words[randomPropName];
+  randomValueNumber = Math.floor(Math.random() * randomPropValue.length);
+  randomValueValue = randomPropValue[randomValueNumber];
+
+  // Set Category Info
+  document.querySelector(".game-info .category span").innerHTML = randomPropName;
+
+  // Convert Chosen Word To Array
+  lettersAndSpace = Array.from(randomValueValue);
+
+  // Create Spans Depending On Word
+  lettersAndSpace.forEach(letter => {
+    let emptySpan = document.createElement("span");
+
+    if (letter === ' ') {
+      emptySpan.className = 'with-space';
+    }
+
+    lettersGuessContainer.appendChild(emptySpan);
+  });
+
+  // Select Guess Spans
+  guessSpans = document.querySelectorAll(".letters-guess span");
+}
+
+function goToChat() {
+  window.location.href = "chat.html";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
