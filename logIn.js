@@ -31,4 +31,5 @@ function signup() {
     }
   
     alert('Login successful!');
+    window.location.href ='game.html'
   }
