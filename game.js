@@ -29,10 +29,10 @@ lettersArray.forEach(letter => {
 
 // Object Of Words + Categories
 const words = {
-  Mekla: ['kosksi','Mloukhiya','Mlewi','Mtabga','Hargma','Slata','Kafteji'],
+  Mekla: ['kosksi','Mloukhya','Mlewi','Mtabga','Hargma','Slata','Kafteji'],
   Mousalsel: ['Choufli hal','Maktoub','Macheer','sayed erim'],
-  Mezwed: ['malek rouhy','darkom','bari fout','zinek yesher','galouli rawah'],
-  Machahir: ['farhat hached','lamin nahdi','Hend sabri','Hanabaal']
+  Mezwed: ['malek rouhy','darkom','bari fout','zinek yesher','barani'],
+  Machahir: ['hached','nahdi','Hend sabri','Hanabaal']
 }
 
 // Get Random Property
